@@ -1,0 +1,111 @@
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Header or Title */
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Game Board */
+#board {
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent glassy background */
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    animation: zoomIn 1s ease-out;
+}
+
+/* Tiles */
+#board img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#board img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Score and Timer */
+#score, #timer {
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Retry Button */
+#retry {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient button */
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    display: block;
+}
+
+#retry:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 75, 43, 0.7);
+}
+
+#retry:active {
+    transform: scale(1);
+    box-shadow: 0px 5px 10px rgba(255, 75, 43, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
